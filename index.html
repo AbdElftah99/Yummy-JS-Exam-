@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YUMMY</title>
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com"  />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet"/>
+
+    <!--Font Awsome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+    <!--BootStrap Style-->
+    <link href="./css/bootstrap.min.css" rel="stylesheet" >
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!--Our Style-->
+    <link href="./css/main.css" rel="stylesheet" > 
+</head>
+<body data-bs-theme="dark" class="position-relative">
+    
+    <!--Side Nav-->
+    <div class="side-nav">
+        <div class="side-nav-inner p-3 bg-body-tertiary position-relative">
+          <div class="profile mb-5 text-center">
+            <h1>Yummy</h1>
+          </div>
+  
+          <ul class="list-unstyled mb-0 overflow-hidden">
+            <li id="searchLink" class="rounded-2 py-2 mb-2">
+              <i class="fa-solid fa-magnifying-glass me-3"></i><span class="fs-5">Search</span>
+            </li>
+  
+            <li id="categoriesLink" class="rounded-2 py-2 mb-2">
+              <i class="fa-solid fa-layer-group me-3"></i><span class="fs-5">Categories</span>
+            </li>
+  
+            <li id="areaLink" class="rounded-2 py-2 mb-2">
+              <i class="fa-solid fa-earth-americas me-3"></i><span class="fs-5">Area</span>
+            </li>
+  
+            <li id="ingredientsLink" class="rounded-2 py-2">
+              <i class="fa-solid fa-burger me-3"></i><span class="fs-5">Ingredients</span>
+            </li>
+  
+            <li id="contactUs" class="rounded-2 py-2">
+              <i class="fa-solid fa-share-nodes me-3"></i><span class="fs-5">Contact us</span>
+            </li>
+          </ul>
+  
+          <div class="nav-footer position-absolute bottom-0 mb-3">
+            <div class="icons">
+              <i class="fa-brands fa-facebook me-1"></i>
+              <i class="fa-brands fa-x-twitter me-1"></i>
+              <i class="fa-solid fa-globe"></i>
+            </div>
+            <div class="footer">
+              <p>Copyright Â© 2019 All Rights <br />Reserved.</p>
+            </div>
+          </div>
+        </div>
+  
+        <div id="menu" class="rounded-end-4 bg-body-secondary">
+          <img id="menuLogo" src="./images/logo.png" alt="logo" />
+          <i id="openIcon" class="menuIcon fa-solid fa-bars fa-2x"></i>
+          <i id="closeIcon" class="menuIcon fa-solid fa-xmark fa-2x"></i>
+          <div id="contactIcon" class="text-center fs-5">
+            <i class="fa-solid fa-globe mb-2"></i>
+            <i class="fa-solid fa-share-nodes"></i>
+          </div>
+        </div>
+    </div>
+
+    <!--Cover-->
+    <header id="cover">
+        <img id="logo" src="images/logo.png" alt="logo" />
+        <h1>Yummy</h1>
+      </header>
+
+    <!--Home-->
+    <section id="home" class=""> 
+        <div class="container-lg p-4">
+            <div class="row g-2" id="data">
+            </div>
+        </div>
+    </section>
+
+    <!--search-->
+    <section id="search" class="overflow-auto bg-body-tertiary rounded-3 shadow p-5 d-none">
+      <i id="closeSearch" class="fa-solid fa-xmark p-3 rounded-3 shadow text-dark fs-5"></i>
+      
+      <div class="container-lg p-4">
+        <div id="searchInputs" class="row g-3">
+          <div id="searchByName" class="col-md-6">
+            <div class="input-container">
+              <input
+                placeholder="Search By Name"
+                id="name"
+                type="text"
+              />
+              <label for="name" class="input-label">Search By Name</label>
+              <span class="input-highlight"></span>
+            </div>
+          </div>
+
+          <div id="searchByFLetter" class="col-md-6">
+            <div class="input-container">
+              <input
+                placeholder="Search By First Letter"
+                id="fLetter"
+                type="text"
+                maxlength="1"
+              />
+              <label for="fLetter" class="input-label"
+                >Search By First Letter</label
+              >
+              <span class="input-highlight"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   
+
+    <!--categories-->
+    <section
+    id="categories"
+    class="overflow-auto bg-body-tertiary rounded-3 shadow p-5 overflow-auto">
+    <i
+      id="closeCategories"
+      class="fa-solid fa-xmark p-3 rounded-3 shadow text-dark fs-5"
+    ></i>
+    <div class="container-lg p-5">
+      <div id="categoriesList" class="row g-3"></div>
+    </div>
+  </section>
+
+  <!--area-->
+  <section id="area" class="overflow-auto bg-body-tertiary rounded-3 shadow p-5 overflow-auto">
+      <i
+        id="closeArea"
+        class="fa-solid fa-xmark p-3 rounded-3 shadow text-dark fs-5"
+      ></i>
+      <div class="container-lg p-5">
+        <div id="areaList" class="row g-3"></div>
+      </div>
+  </section>
+
+  <!--ingredients-->
+  <section id="ingredients" class="overflow-auto bg-body-tertiary rounded-3 shadow p-5 overflow-auto">
+      <i
+        id="closeIngredients"
+        class="fa-solid fa-xmark p-3 rounded-3 shadow text-dark fs-5"
+      ></i>
+      <div class="container-lg p-5">
+        <div id="ingredientsList" class="row g-3"></div>
+      </div>
+    </section>
+
+  <!--contact -->
+  <section id="contact" class="overflow-auto bg-body-tertiary rounded-3 shadow p-5 overflow-auto text-center">
+    <i
+      id="closeContact"
+      class="fa-solid fa-xmark p-3 rounded-3 shadow text-dark fs-5"
+    ></i>
+    <div class="container-lg p-4">
+      <form id="contactInputs" class="row">
+        <div class="col-md-6">
+          <div class="input-container">
+            <input placeholder="Enter Your Name" id="uName" type="text" />
+            <label for="uName" class="input-label">Enter Your Name</label>
+            <span class="input-highlight"></span>
+          </div>
+
+          <div id="nameWarning" class="alert alert-warning">
+            Special characters and numbers not allowed
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="input-container">
+            <input placeholder="Enter Your Email" id="email" type="email" />
+            <label for="email" class="input-label">Enter Your Email</label>
+            <span class="input-highlight"></span>
+          </div>
+
+          <div id="emailWarning" class="alert alert-warning">
+            Email not valid *exemple@yyy.zzz
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="input-container">
+            <input placeholder="Enter Your Phone" id="phone" type="tel" />
+            <label for="phone" class="input-label">Enter Your Phone</label>
+            <span class="input-highlight"></span>
+          </div>
+
+          <div id="phoneWarning" class="alert alert-warning">
+            Enter valid Phone Number
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="input-container">
+            <input placeholder="Enter Your Age" id="age" type="number" />
+            <label for="age" class="input-label">Enter Your Age</label>
+            <span class="input-highlight"></span>
+          </div>
+
+          <div id="ageWarning" class="alert alert-warning">
+            Enter valid age
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="input-container">
+            <input
+              placeholder="Enter Your Password"
+              id="password"
+              type="password"
+            />
+            <label for="password" class="input-label"
+              >Enter Your Password</label
+            >
+            <span class="input-highlight"></span>
+          </div>
+
+          <div id="passwordWarning" class="alert alert-warning">
+            Enter valid password *Minimum eight characters, at least one
+            letter and one number:*
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="input-container">
+            <input
+              placeholder="Repeat Your Password"
+              id="rePassword"
+              type="password"
+            />
+            <label for="rePassword" class="input-label"
+              >Repeat Your Password</label
+            >
+            <span class="input-highlight"></span>
+          </div>
+
+          <div id="rePasswordWarning" class="alert alert-warning">
+            Enter valid repassword
+          </div>
+        </div>
+      </form>
+      <button
+        id="submitBtn"
+        class="btn btn-outline-warning px-5 mt-5 disabled"
+      >
+        Submit
+      </button>
+    </div>
+  </section>
+
+  <!--details-->
+  <section class="details d-none">
+    <div class="container">
+        <header class="hstack justify-content-between">
+            <h1 class="h3 py-4">Instructions</h1>
+            <button id="btn-close" class="btn-close"></button>
+        </header>
+
+        <div class="row g-4" id="detailsContent">
+            
+        </div>
+    </div>
+  </section>
+
+   <!--Loading-->
+   <section class="loading d-none">
+    <span class="loader"></span>
+  </section>
+
+
+     <!--js Scripts-->
+     <script src="./js/jquery-3.7.1.js"></script>
+     <script src="./js/bootstrap.bundle.min.js"></script>
+     <script type="module" src="./js/index.js"></script>
+</body>
+</html>
